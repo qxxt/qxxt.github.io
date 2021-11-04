@@ -1,0 +1,27 @@
+title: qxxt
+description: "a personal website you can read"
+baseurl: /
+url: https://qxxt.github.io
+github_username:  qxxt
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+	- jekyll-feed
+	- jekyll-optional-front-matter
+
+exclude:
+	- Gemfile
+	- Gemfile.lock
+	- node_modules
+	- vendor/bundle/
+	- vendor/cache/
+	- vendor/gems/
+	- vendor/ruby/
+
+permalink: /:category/:title
+
+sass:
+	sourcemap: never
+	style: compressed
