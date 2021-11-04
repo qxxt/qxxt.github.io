@@ -8,20 +8,20 @@ markdown: kramdown
 highlighter: rouge
 
 plugins:
-	- jekyll-feed
-	- jekyll-optional-front-matter
+ - jekyll-feed
+ - jekyll-optional-front-matter
 
 exclude:
-	- Gemfile
-	- Gemfile.lock
-	- node_modules
-	- vendor/bundle/
-	- vendor/cache/
-	- vendor/gems/
-	- vendor/ruby/
+ - Gemfile
+ - Gemfile.lock
+ - node_modules
+ - vendor/bundle/
+ - vendor/cache/
+ - vendor/gems/
+ - vendor/ruby/
 
 permalink: /:categories/:title
 
 sass:
-	sourcemap: never
-	style: compressed
+ sourcemap: never
+ style: compressed
