@@ -20,7 +20,7 @@ exclude:
 	- vendor/gems/
 	- vendor/ruby/
 
-permalink: /:category/:title
+permalink: /:categories/:title
 
 sass:
 	sourcemap: never
