@@ -1,27 +1,44 @@
-title: qxxt
+title: "qxxt"
 description: "a personal website you can read"
-baseurl: /
-url: https://qxxt.github.io
-github_username:  qxxt
+baseurl: ""
+url: "https://qxxt.github.io"
+
+author:
+  github_username: "qxxt"
+  email:
+    uname: "groundlet"
+    domain: "protonmail"
+    tld: "com"
+
+navs:
+  Writing: writing.html
+  Projects: projects.html
+  About: about.html
+
+permalink: /post/:title.html
 
 markdown: kramdown
-highlighter: rouge
 
-plugins:
- - jekyll-feed
- - jekyll-optional-front-matter
-
-exclude:
- - Gemfile
- - Gemfile.lock
- - node_modules
- - vendor/bundle/
- - vendor/cache/
- - vendor/gems/
- - vendor/ruby/
-
-permalink: /:categories/:title
+kramdown:
+  auto_ids: false
+  input: GFM
+  syntax_highlighter: rouge
 
 sass:
- sourcemap: never
- style: compressed
+  sourcemap: never
+  style: compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-optional-front-matter
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
