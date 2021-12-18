@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<article id="post-content">
+	<header id="post-meta">
+		<h5 class="post-title">{{ page.title }}</h5>
+		{% if page.update %}
+		<p isUpdated class="post-update">
+			updated on <time>{{ page.update | date_to_string }}</time>
+		</p>
+		{% endif %}
+		<p class="post-publish">
+			<time>{{ page.date | date_to_string }}</time>
+		</p>
+		<p class="post-keywords"><a class="post-category" href="/{{ page.collection }}/#ct-{{ page.category }}">{{ page.category }}</a>{% for tag in page.tags %}, <a class="post-tag" href="/{{ page.collection }}/#ct-{{ tag }}">{{ tag }}</a>{% endfor %}</p>
+	</header>
+	<main>
+		{{ page.content }}
+	</main>
+</article>

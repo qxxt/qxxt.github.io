@@ -1,0 +1,51 @@
+<p id="socials">
+	{% for social in site.socials %}
+	{% if social.name == "Email" %}
+	{% if social.addr.first %}
+	<noscript>
+		<style>
+			#social-email:target::after {
+				content: ': 'attr(data-email)"@"attr(data-domain)"."attr(data-tld)
+			}
+		</style>
+	</noscript>
+	<a
+		class="social"
+		id=social-email
+		data-email={{social.addr[0] }}
+		data-tld={{social.addr[2]}}
+		data-domain={{social.addr[1]}}
+		href=#social-email
+		onclick="this.href='mailto:'+this.dataset.email+'@'+this.dataset.domain+'.'+this.dataset.tld">
+		{% if social.icon %}
+		<span class="{{ social.icon }}"></span>
+		{% else %}
+		Email
+		{% endif %}
+	</a>
+	{% else %}
+	<a class="social" href="mailto:{{social.addr}}">
+		{% if social.icon %}
+		<span class="{{ social.icon }}"></span>
+		{% else %}
+		Email
+		{% endif %}
+	</a>
+	{% endif %}
+	{% if social.pgp %}
+		<a href="{{ social.pgp }}" target="_blank">[pgp]</a>
+	{% endif %}
+	{% else %}
+	<a class="social" href="{{ social.addr }}" target="_blank">
+		{% if social.icon %}
+		<span class="{{ social.icon }}"></span>
+		{% else %}
+		{{ social.name }}
+		{% endif %}
+	</a>
+	{% endif %}
+	{% if forloop.last == false %}
+		/
+	{% endif %}
+	{% endfor %}
+</p>

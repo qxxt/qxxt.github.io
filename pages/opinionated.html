@@ -1,0 +1,14 @@
+---
+title: shit qxxt say
+layout: default
+permalink: "/opinionated/"
+---
+
+<h5>shit qxxt say</h5>
+<p style="margin:0 0 1rem">these posts are not to be taken seriously.</p>
+
+{% include cts.html collection=site.opinionated %}
+
+{% for post in site.opinionated %}
+	{% include item.html post=post ct=true %}
+{% endfor %}

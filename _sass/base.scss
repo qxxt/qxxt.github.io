@@ -1,0 +1,53 @@
+html, body {
+	margin: 0!important;
+}
+
+body {
+	background-color: $background;
+	color: $color;
+}
+
+a {
+	color: $anchor;
+	
+	&:hover, &:active {
+		color: $anchor-hover;
+	}
+	
+	&:visited {
+		color: $anchor-visited;
+	}
+}
+
+h1, h2, h3, h4, h5, h6, mark, dt, strong, b {
+	color: $lead-color;
+}
+
+:not(pre) > code, pre, blockquote, hr {
+	background-color: $block-background;
+	border-color: $block-border;
+}
+
+:not(div.highlighter-rouge:first-child) {
+	margin-top: 1rem;
+}
+
+hr {
+	border-style: double;
+}
+
+table caption, blockquote footer, figure figcaption, .muted {
+	color: $muted-color;
+}
+
+table {
+	&.stripped tbody tr:nth-child(odd) {
+		background-color: $block-background;
+	}
+	td, th {
+		border-color: $block-border;
+	}
+	thead th, tfoot td {
+		background-color: $lead-color;
+	}
+}

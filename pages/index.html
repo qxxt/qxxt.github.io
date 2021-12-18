@@ -1,0 +1,8 @@
+---
+layout: default
+permalink: "/index.html"
+---
+
+{% for post in site.posts %}
+	{% include item.html post=post summary=true %}
+{% endfor %}

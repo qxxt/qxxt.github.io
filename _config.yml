@@ -1,0 +1,88 @@
+title: "qxxt"
+author: "qxxt"
+description: "a blog you can read."
+url: "https://qxxt.github.io"
+baseurl: "/"
+permalink: /:year/:month/:title
+
+nav_pages:
+  - name: "posts"
+    addr: "/posts/"
+  - name: "about"
+    addr: "/about.html"
+  - name: "[SQS]"
+    addr: "/opinionated/"
+
+collections_dir: items
+collections:
+  opinionated:
+    output: true
+    permalink: /opinionated/:name
+
+socials:
+  - name: "Email"
+    #icon: "icon icon-email"
+    addr: ["tripodae", "gmail", "com"]
+    pgp: "/0E0ECFBD7677BF2D.txt"
+  - name: "Github"
+    #icon: "icon icon-email"
+    addr: "https://github.com/qxxt"
+  - name: "Stackoverflow"
+    #icon: "icon icon-stackoverflow"
+    addr: "https://stackoverflow.com/users/17310957"
+
+# theme: jekyll-teks
+
+plugins:
+  - jekyll-feed
+
+markdown: kramdown
+highlighter: rouge
+
+sass:
+  sass_dir: _sass
+  style: compressed
+  sourcemap: never
+
+kramdown:
+  auto_ids: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: text
+    span:
+      disable: true
+    block:
+      line_numbers: false
+
+strict_front_matter: true
+# livereload: true
+
+jekyll_compose:
+  auto_open: true
+  default_front_matter:
+    posts:
+      layout: post
+      summary: #"Lorem ipsum dolor sit amet"
+      category: majorCategory
+      tags: #["tag1", "tag2", "tag3"]
+    opinionated:
+      layout: post
+      summary: #"Lorem ipsum dolor sit amet"
+      category: majorCategory
+      tag: #["tag1", "tag2", "tag3"]
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - /*#
+  - /*~
+  - ./*
+  - themes/

@@ -1,0 +1,20 @@
+{% assign categories = include.collection | map: "category" | uniq %}
+{% assign tags = include.collection | map: "tags" | uniq %}
+{% assign cts = categories | concat: tags %}
+
+<style>
+	{% for ct in cts %}#ct-{{ ct }}:target ~ article[ct~={{ ct }}]{% if forloop.last == false %}, {% endif %}{% endfor %} {display: block;}{% for ct in cts %}#ct-{{ ct }}:target ~ article:not([ct~={{ ct }}]){% if forloop.last == false %}, {% endif %}{% endfor %} {display: none;}
+</style>
+<hr style="margin:0;">
+<b>FILTER: </b>
+<a class="category-item" id="show-all" href="#show-all">show all</a> /
+{% for category in categories %}
+	<a class="category-item" id="ct-{{ category }}" href="#ct-{{ category }}">{{ category }}</a> /
+{% endfor %}
+{% for tag in tags %}
+	<a class="tag-item" id="ct-{{ tag }}"  href="#ct-{{ tag }}">{{ tag }}</a>
+	{% if forloop.last == false %}
+		/
+	{% endif %}
+{% endfor %}
+<hr style="margin:0;">

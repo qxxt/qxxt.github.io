@@ -1,0 +1,12 @@
+<header class="small" id="site-header">
+	<h5 id="site-title"><a href="{{ site.baseurl }}#">{{ site.title }}</a></h5>
+	<p>{{ site.description }}</p>
+	<nav id="site-nav">
+		{% for nav_page in site.nav_pages %}
+			<a {% if nav_page.name == "[SQS]" %}class="monospace"{% endif %} href="{{ nav_page.addr }}#">{{ nav_page.name }}</a>
+			{% if forloop.last == false %}
+				/
+			{% endif %}
+		{% endfor %}
+	</nav>
+</header>

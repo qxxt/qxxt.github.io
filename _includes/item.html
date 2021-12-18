@@ -1,0 +1,21 @@
+<article class="post-item" {% if include.ct %}ct="{{ include.post.category }} {{ include.post.tags | join: ' ' }}"{% endif %}>
+	<header class="post-header">
+		<h5 class="post-title">
+			<a class="post-permalink" href="{{ include.post.url }}#{{ post.update | date: '%m-%d-%Y' }}">{{ include.post.title }}</a>
+		</h5>
+		{% if include.post.update %}
+		<p isUpdated class="post-update">
+			updated on <time>{{ include.post.update | date_to_string }}</time>
+		</p>
+		{% endif %}
+		<p class="post-publish">
+			<time>{{ include.post.date | date_to_string }}</time>
+		</p>
+	</header>
+	{% if include.post.summary and include.summary %}
+	<p class="post-summary">{{ include.post.summary }}</p>
+	{% endif %}
+	<footer class="post-keywords">
+		<a class="post-category" href="/{{ include.post.collection }}/#ct-{{ include.post.category }}">{{ include.post.category }}</a>{% for tag in include.post.tags %}, <a class="post-tag" href="/{{ include.post.collection }}/#ct-{{ tag }}">{{ tag }}</a>{% endfor %}
+	</footer>
+</article>

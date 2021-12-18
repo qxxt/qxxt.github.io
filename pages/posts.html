@@ -1,0 +1,10 @@
+---
+title: "posts"
+layout: default
+permalink: "/posts/"
+---
+
+{% include cts.html collection=site.posts %}
+{% for post in site.posts %}
+	{% include item.html post=post ct=true %}
+{% endfor %}
