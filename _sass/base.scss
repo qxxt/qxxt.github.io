@@ -19,6 +19,13 @@ a {
 	}
 }
 
+.spoiler a {
+	color: #000;
+	&:hover, &:active {
+		color: #fff;
+	}
+}
+
 h1, h2, h3, h4, h5, h6, mark, dt, strong, b {
 	color: $lead-color;
 }
