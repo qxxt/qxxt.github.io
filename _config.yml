@@ -57,19 +57,19 @@ kramdown:
 strict_front_matter: true
 # livereload: true
 
-jekyll_compose:
-  auto_open: true
-  default_front_matter:
-    posts:
-      layout: post
-      summary: #"Lorem ipsum dolor sit amet"
-      category: majorCategory
-      tags: #["tag1", "tag2", "tag3"]
-    opinionated:
-      layout: post
-      summary: #"Lorem ipsum dolor sit amet"
-      category: majorCategory
-      tag: #["tag1", "tag2", "tag3"]
+#jekyll_compose:
+#  auto_open: true
+#  default_front_matter:
+#    posts:
+#      layout: post
+#      summary: #"Lorem ipsum dolor sit amet"
+#      category: majorCategory
+#      tags: #["tag1", "tag2", "tag3"]
+#    opinionated:
+#      layout: post
+#      summary: #"Lorem ipsum dolor sit amet"
+#      category: majorCategory
+#      tag: #["tag1", "tag2", "tag3"]
 
 exclude:
   - .sass-cache/
