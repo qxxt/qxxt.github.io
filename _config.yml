@@ -2,7 +2,7 @@ title: "qxxt"
 author: "qxxt"
 description: "a blog you can read."
 url: "https://qxxt.github.io"
-baseurl: "/"
+baseurl: ""
 permalink: /:year/:month/:title
 
 nav_pages:
